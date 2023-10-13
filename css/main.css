@@ -3,136 +3,119 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
+p,
+span {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
 body {
   background-color: hsl(204, 43%, 93%);
 }
 .container {
-  position: relative;
-  width: 100vw;
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Karla', sans-serif;
+  align-items: center;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
 }
-  @media only screen and (max-width:900px) {
-    .container {
-      align-items: baseline;
-      justify-content: flex-start;
-    }
-  }
+
 .box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 550px;
-  height: 450px;
-  border-radius: 10px;
+  max-width: 100vw;
+  width: 60rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
 }
-  @media only screen and (max-width:900px) {
-    .box {
-      width: 275px;
-      height: 450px;
-    }
-  }
+
 .cmt-description {
-  padding: 40px 40px;
-  height: 200px;
+  border-radius: 10px 10px 0 0;
+  grid-column: span 2;
+  padding: 3rem;
   background-color: white;
-  border-radius: 10px 10px 0px 0px;
 }
-  @media only screen and (max-width:900px) {
-    .cmt-description {
-      margin-top: 20px;
-      padding-left: 20px;
-      padding-top: 40px;
-      height: 250px;
-      border-radius: 5px 5px 0px 0px;
-    }
-  }
+
 .cmt-description-1 {
+  font-size: 2rem;
+  font-weight: 700;
   color: hsl(179, 62%, 43%);
+  margin-bottom: 2rem;
 }
 .cmt-description-2 {
-  padding-top: 20px;
+  font-weight: 700;
   color: hsl(71, 73%, 54%);
+  margin-bottom: 1rem;
 }
 .cmt-description-3 {
-  padding-top: 10px;
   color: hsl(218, 22%, 67%);
-  font-size: 14px;
-  line-height: 2;
 }
-.cnt {
-  display: flex;
-  flex-wrap: wrap
-}
+
 .cnt-1 {
-  width: 275px;
-  height: 200px;
+  border-radius: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background-color: hsl(179, 62%, 37%);
-  border-radius: 0px 0px 0px 10px;
-  padding: 25px;
+  padding: 3rem;
 }
-  @media only screen and (max-width:900px) {
-    .cnt-1 {
-      border-radius: 0px 0px 0px 0px;
-    }
-  }
 .cnt-1-head {
   color: white;
+  font-weight: 700;
 }
 .cnt-1-salary {
-  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   color: white;
-  font-size: 22px;
+}
+.salary-no {
+  font-size: 3rem;
+  font-weight: 700;
 }
 .cnt-1-month {
   text-decoration: dashed;
   color: rgba(255, 255, 255, 0.658);
-  font-size: 14px;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 .cnt-1-access {
-  padding-top: 8px;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: white;
+  margin-bottom: 3rem;
 }
-.btn {
-  padding-top: 30px;
-}
-.cnt-btn {
-  font-family: 'Karla';
+.cnt-btn:link,
+.cnt-btn:visited {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-family: "Karla";
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
   background-color: hsl(71, 73%, 54%);
   color: white;
-  padding: 10px 80px;
+  padding: 1rem 8rem;
   border-radius: 5px;
-  border: none;
 }
-  @media only screen and (max-width:900px) {
-    .cnt-btn {
-      padding: 10px 80px;
-    }
-}
+
 .cnt-2 {
-  width: 275px;
-  height: 200px;
+  border-radius: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   color: white;
   background-color: hsla(179, 62%, 43%, 0.744);
-  border-radius: 0px 0px 10px 0px;
-  padding: 20px;
+  padding: 3rem;
 }
-  @media only screen and (max-width:900px) {
-    .cnt-2 {
-      margin-bottom: 100px;
-      border-radius: 0px 0px 5px 5px;
-    }
-  }
+.cnt-2-head {
+  font-weight: 700;
+}
 .cnt-2-li {
-  font-size: 12px;
-  line-height: 1.5;
-  padding-top: 10px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.861);
   list-style: none;
 }
